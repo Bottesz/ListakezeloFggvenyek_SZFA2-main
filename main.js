@@ -2,6 +2,14 @@ import { emberekLISTA } from "./adat.js";
 import { sorTorles, szuresNevSzerint, tablazatRendez } from "./adatKezelo.js";
 import { megjelenites, tablazatOsszeallit } from "./fuggvenyek.js";
 import { adatokListaba } from "./urlapKezelo.js";
+import { getAdat } from "../aszinkron.js";
+import { deleteAdat } from "../aszinkron.js";
+
+deleteAdat("http://localhost:3000/emberekLISTA",init)
+
+let nevirany = 1;
+//init emebereklista
+
 /*  jelenítsük meg az adatainkat egy táblázatban az adatok div-ben
 az urlap div-ben legyen egy űrlap, amivel ilyen adatokat tudunk a táblázatba beletenni
 
